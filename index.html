@@ -121,21 +121,19 @@
       var btn = document
         .getElementById("btnConfirm")
         .addEventListener("click", () => {
-          swal(
-            "Digita la cantidad de personas a las que vas a registrar para la asistencia de mis quince",
-            {
-              content: "input",
-            }
-          ).then((value) => {
-            swal({
+            swal(
+              "Digita los nombres y apellidos de las personas a registrar, separados por comas (,)",
+              {
               content: {
                 element: "input",
                 attributes: {
-                  placeholder: "Ingrese los nombres de las personas a registrar",
-                  type: "textarea",
+                  placeholder: "nombre 1, nombre 2, nombre 3 ...",
+                  type: "text",
                 }},
             }).then((text) =>{
-              Email.send({
+              if(!text) swal("Error", "No has enviado nada", "warning");
+              else{
+                Email.send({
                     Host: "smtp.gmail.com",
                     Username: 'lubrillantasjezreel@gmail.com',
                     Password: "rvuxyiyppggwcrvx",
@@ -144,13 +142,12 @@
                     Subject: "Invitados",
                     Body: text,
                 
-                });
-
-              swal("Registro Exitoso", "Te espero, no faltes!", "success");
-
+                }).then(()=>{
+                   swal("Registro Exitoso", "Te espero, no faltes!", "success");
+                })
+              }
             });
           });
-        });
     </script>
   </body>
 </html>
