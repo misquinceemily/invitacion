@@ -1,82 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Quince</title>
 
-    <title>Home</title>
-  </head>
-  <body>
-    <main>
-      <div class="container">
-        <img
-          src="Copia de Quinceaera Invitation - Hecho con PosterMyWall.jpg"
-          class="img-fluid mx-auto"
-          alt="invitacion"
-          style="padding: 1%"
-        />
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body text-center">
-                <button id="btnConfirm" class="btn btn-primary text-center">
-                  Confirma tu asistencia
-                </button>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+  <style>
+    .selector-for-some-widget {
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+<body>
+  
+  <main>
+
+    <div class="container">
+      <div class="row">
+        <div class="col container" >
+          <img src="Copia de Quinceaera Invitation - Hecho con PosterMyWall.jpg" class= "img-fluid" alt="Invitation">
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Confirma tu asistencia!</h5>
+                <a href="#" class="btn btn-success"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                </svg>  Confirmar </a>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="container"
-          style="height: 100%; width: 100%; margin-top: 20px"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.747261047942!2d-72.51366005028733!3d7.816555394339801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e66462509a1b8d3%3A0x9bdf940e548d6f7b!2sCra.%202%20%231733%2C%20Los%20Patios%2C%20Norte%20de%20Santander!5e0!3m2!1ses!2sco!4v1650325424762!5m2!1ses!2sco"
-            style="border: 10"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.980333138737!2d-72.61315113881572!3d7.91088159912783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664fdb4b0d0e87%3A0xd9d45024c8a6c22c!2sRancho%20para%C3%ADso!5e1!3m2!1ses!2sco!4v1650722529114!5m2!1ses!2sco" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
-    </main>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-      var btn = document
-        .getElementById("btnConfirm")
-        .addEventListener("click", () => {
-          swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          }).then((willDelete) => {
-            if (willDelete) {
-              swal("Poof! Your imaginary file has been deleted!", {
-                icon: "success",
-              });
-            } else {
-              swal("Your imaginary file is safe!");
-            }
-          });
-        });
-    </script>
-  </body>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
 </html>
