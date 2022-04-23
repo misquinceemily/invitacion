@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <img
+          src="Copia de Quinceaera Invitation - Hecho con PosterMyWall.jpg"
+          class="img-fluid mx-auto"
+          alt="invitacion"
+          style="padding: 1%"
+        />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body text-center">
+                <button id="btnConfirm" class="btn btn-primary text-center">
+                  Confirma tu asistencia
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+          style="height: 100%; width: 100%; margin-top: 20px"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.747261047942!2d-72.51366005028733!3d7.816555394339801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e66462509a1b8d3%3A0x9bdf940e548d6f7b!2sCra.%202%20%231733%2C%20Los%20Patios%2C%20Norte%20de%20Santander!5e0!3m2!1ses!2sco!4v1650325424762!5m2!1ses!2sco"
+            style="border: 10"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      var btn = document
+        .getElementById("btnConfirm")
+        .addEventListener("click", () => {
+          swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          }).then((willDelete) => {
+            if (willDelete) {
+              swal("Poof! Your imaginary file has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
