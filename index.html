@@ -97,8 +97,8 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <p>Para registrar mas de un invitado, digite la cantidad en el siguiente cuadro</p>
+          <div class="modal-body" id="bodyCard">
+            <p>Para registrar mas de un invitado (no se incluya usted), digite la cantidad en el siguiente cuadro</p>
             <div class="row">
               <div class="col-9 col-md-10 p-2 h-60">
                 <form class="form-floating w-auto">
@@ -128,20 +128,21 @@
                   <label for="floatingInputValue">N° celular</label>
                 </form>
               </div>
+              
             </div>
 
             <template id="camposAdd">
               <div class="row mt-2">
-                <p>Invitado 1</p>
+                <p id="idInvitado">0</p>
                 <div class="col">
                   <form class="form-floating">
-                  <input type="text" class="form-control" >
+                  <input type="text" class="form-control" style="height: 3em;">
                   <label for="floatingInputValue">Nombres</label>
                 </form>
                 </div>
                 <div class="col">
                   <form class="form-floating">
-                    <input type="text" class="form-control" >
+                    <input type="text" class="form-control" style="height: 3em;">
                     <label for="floatingInputValue">N° celular</label>
                   </form>
                 </div>
