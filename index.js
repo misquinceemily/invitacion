@@ -22,6 +22,7 @@ btnRegis.addEventListener("click", () => {
     aux = 1;
 
   if (!!document.querySelector(".idInvitado")) {
+
     var valor =
       document.querySelectorAll(".idInvitado")[
         document.querySelectorAll(".idInvitado").length - 1
@@ -66,3 +67,7 @@ btnSubmi.addEventListener("click", () => {
     });
   }
 });
+
+document.getElementById("btnCancela").addEventListener('click',()=>{
+  location.reload();
+})
