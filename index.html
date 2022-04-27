@@ -16,7 +16,8 @@
     <style>
       body {
         margin-top: 10px;
-        background-color:rgb(54, 54, 54) ;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 41%, rgba(255,255,255,1) 100%);
       }
     </style>
   </head>
@@ -41,15 +42,14 @@
                   margin-top: 20px;
                   margin-bottom: 20px;
                   align-items: center;
-                  border-radius: 10px 100px / 120px;
-                  -webkit-box-shadow: -3px 2px 26px 0px #e9e9e9;
-                  box-shadow: -3px 2px 26px 0px #e9e9e9;
-                  background-color: rgb(54, 54, 54);
+                  border-radius: 20px;
+                  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                  background-color: #F3F3F3;
                 "
               >
                 <div class="card-body">
-                  <h5 class="card-title" style="color: aliceblue;">Confirma tu asistencia!</h5>
-                  <button id="btnConfirm" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalUsu">
+                  <h5 class="card-title" style="color: #000;">Confirma tu asistencia!</h5>
+                  <button id="btnConfirm" class="btn btn-success w-100" style="background-color: #04008A; border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#modalUsu">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -71,7 +71,7 @@
               </div>
             </div>
             <div class="row" >
-              <h4 style="color: aliceblue; margin-top: 10px;">Ubicación del evento</h4>
+              <h4 style="color: #000; margin-top: 10px;">Ubicación del evento</h4>
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.980333138737!2d-72.61315113881572!3d7.91088159912783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664fdb4b0d0e87%3A0xd9d45024c8a6c22c!2sRancho%20para%C3%ADso!5e1!3m2!1ses!2sco!4v1650722529114!5m2!1ses!2sco"
                 width="100%"
@@ -107,7 +107,7 @@
                 </form>
               </div>
               <div class="col-3 col-md-2 align-self-center align-items-start h-auto w-auto">
-                <button type="button" id="cntPerson" class="btn btn-success btn-sm w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <button type="button" id="cntPerson" style="background-color: #04008A; " class="btn btn-success btn-sm w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                   <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                 </svg></button>
@@ -152,12 +152,12 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger" style="background-color: #fc1653;"
               data-bs-dismiss="modal"
             >
               Cancelar
             </button>
-            <button type="button" id="btnsubmit"  disabled="true" class="btn btn-success">Confirmar</button>
+            <button type="button" id="btnsubmit"  style="background-color: #04008A;" disabled="true" class="btn btn-success">Confirmar</button>
           </div>
         </div>
       </div>
@@ -169,38 +169,6 @@
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-
-      
-      /*var btn = document
-        .getElementById("btnConfirm")
-        .addEventListener("click", () => {
-            swal(
-              "Digite cantidad de personas a registrar",
-              {
-              content: {
-                element: "input",
-                attributes: {
-                  type: "text",
-                }},
-            }).then((text) =>
-            {
-              if(!text) swal("Error", "No has enviado nada", "warning");
-              else{
-                Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: 'lubrillantasjezreel@gmail.com',
-                    Password: "rvuxyiyppggwcrvx",
-                    To: "johnnyaquintero@gmail.com",
-                    From: 'lubrillantasjezreel@gmail.com',
-                    Subject: "Invitados",
-                    Body: text,
-                
-                }).then(()=>{
-                   swal("Registro Exitoso", "Te espero, no faltes!", "success");
-                })
-              }
-            });
-          });*/
     </script>
     <script src="index.js"></script>
   </body>
