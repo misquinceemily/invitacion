@@ -49,7 +49,7 @@
               >
                 <div class="card-body">
                   <h5 class="card-title" style="color: #000;">Confirma tu asistencia!</h5>
-                  <button id="btnConfirm" class="btn btn-success w-100" style="background-color: #04008A; border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#modalUsu">
+                  <button id="btnConfirm" class="btn   w-100" style="background-color: #7869E7; color: #fff;border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#modalUsu">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -107,7 +107,7 @@
                 </form>
               </div>
               <div class="col-3 col-md-2 align-self-center align-items-start h-auto w-auto">
-                <button type="button" id="cntPerson" style="background-color: #04008A; " class="btn btn-success btn-sm w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <button type="button" id="cntPerson" style="background-color: #7869E7; color: #fff;" class="btn   btn-sm w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                   <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                 </svg></button>
@@ -157,7 +157,7 @@
             >
               Cancelar
             </button>
-            <button type="button" id="btnsubmit"  style="background-color: #04008A;" disabled="true" class="btn btn-success">Confirmar</button>
+            <button type="button" id="btnsubmit"  style="background-color: #7869E7; color: #fff;" disabled="true" class="btn">Confirmar</button>
           </div>
         </div>
       </div>
@@ -169,6 +169,38 @@
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+
+      
+      /*var btn = document
+        .getElementById("btnConfirm")
+        .addEventListener("click", () => {
+            swal(
+              "Digite cantidad de personas a registrar",
+              {
+              content: {
+                element: "input",
+                attributes: {
+                  type: "text",
+                }},
+            }).then((text) =>
+            {
+              if(!text) swal("Error", "No has enviado nada", "warning");
+              else{
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: 'lubrillantasjezreel@gmail.com',
+                    Password: "rvuxyiyppggwcrvx",
+                    To: "johnnyaquintero@gmail.com",
+                    From: 'lubrillantasjezreel@gmail.com',
+                    Subject: "Invitados",
+                    Body: text,
+                
+                }).then(()=>{
+                   swal("Registro Exitoso", "Te espero, no faltes!", "success");
+                })
+              }
+            });
+          });*/
     </script>
     <script src="index.js"></script>
   </body>
